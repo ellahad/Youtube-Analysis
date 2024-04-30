@@ -1,0 +1,12 @@
+# Code snippet for TextBlob
+import pickle
+from textblob import TextBlob
+
+# Define the function for sentiment analysis using TextBlob
+def analyze_sentiment(text):
+    blob = TextBlob(text)
+    return blob.sentiment.polarity, blob.sentiment.subjectivity
+
+# Save TextBlob model
+with open('textblob_model.pkl', 'wb') as f:
+    pickle.dump(analyze_sentiment, f)

@@ -1,0 +1,9 @@
+import pickle
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
+
+# Instantiate the VADER sentiment analyzer
+sia = SentimentIntensityAnalyzer()
+
+# Save VADER model
+with open('vader_model.pkl', 'wb') as f:
+    pickle.dump(sia, f)
